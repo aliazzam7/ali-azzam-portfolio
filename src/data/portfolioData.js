@@ -30,7 +30,7 @@ import bookingformpage1 from '../assets/images/drivewise/bookingformpage1.jpeg';
 import cardetails1 from '../assets/images/drivewise/cardetails1.jpeg';
 import chatbot1 from '../assets/images/drivewise/chatbot1.jpeg';
 import home2 from '../assets/images/drivewise/home2.png';
-import icon from '../assets/images/drivewise/icon.png';
+//import icon from '../assets/images/drivewise/icon.png';
 import licensetrue from '../assets/images/drivewise/licensetrue.jpeg';
 import notificationat10 from '../assets/images/drivewise/notificationat10.jpeg';
 import emailotp from '../assets/images/drivewise/emailotp.png';

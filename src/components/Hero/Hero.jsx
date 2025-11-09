@@ -3,6 +3,8 @@ import { personalInfo } from '../../data/portfolioData';
 // import React, { useState, useEffect } from 'react';
 import './Hero.css';
 // import { personalInfo } from '../../data/portfolioData';
+import cvFile from '../../assets/cv/Ali_Azzam_CV.pdf';
+
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const [titleIndex, setTitleIndex] = useState(0);
@@ -44,6 +46,16 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+//for download cv:
+const handleDownloadCV = () => {
+  const link = document.createElement('a');
+  link.href = cvFile;
+  link.download = 'Ali_Azzam_CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 
   return (
     <section className="hero" id="home">
@@ -67,10 +79,14 @@ const Hero = () => {
               >
                 Get In Touch
               </button>
+             {/* ✅ زر تحميل الـ CV */}
               <button 
                 className="btn btn-secondary"
-                onClick={() => window.open('#', '_blank')}
+                onClick={handleDownloadCV}
               >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style={{marginRight: '8px'}}>
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
                 Download CV
               </button>
             </div>
