@@ -17,7 +17,10 @@ const About = () => {
           animateCounters();
         }
       },
-      { threshold: 0.3 }
+     {
+    threshold: 0.1, // ↓ خفّضها من 0.3 لـ 0.1
+    rootMargin: '0px 0px -10% 0px' // ↓ خليه يشتغل حتى لو ظاهر شوي
+    }
     );
 
     if (currentRef) {
@@ -121,6 +124,7 @@ const About = () => {
 };
 
 export default About;
+
 // import React, { useState, useEffect, useRef } from 'react';
 // import './About.css';
 // import { personalInfo, stats, education } from '../../data/portfolioData';
